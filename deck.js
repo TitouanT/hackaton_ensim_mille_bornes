@@ -1,6 +1,6 @@
 const template = [
 	{
-		type: "Attaques",
+		type: "Attaque",
 		cards: [
 			{qtt: 3, name: "Accident de la route ", value: 1},
 			{ qtt:3, name: "Panne d essence", value: 2},
@@ -22,7 +22,7 @@ const template = [
 			},
 
 			{
-				type: "Bottes",
+				type: "Botte",
 				cards: [
 					{qtt: 1, name: "As du volant", value : 1},
 					{ qtt:1, name: "Camion-citerne", value: 2},
@@ -35,11 +35,11 @@ const template = [
 				{
 					type: "Distance",
 					cards: [
-						{qtt: 10, value: 1},
-						{ qtt:10, value: 2},
-						{ qtt:10, value : 3},
-						{ qtt:12, value : 4},
-						{ qtt:4, value : 5},
+						{qtt: 10, value: 25},
+						{ qtt:10, value: 50},
+						{ qtt:10, value : 75},
+						{ qtt:12, value : 100},
+						{ qtt:4, value : 200},
 					]
 
 
