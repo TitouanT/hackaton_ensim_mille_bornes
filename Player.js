@@ -72,7 +72,7 @@ Player.prototype.addBonus(bonus){
 }
 
 Player.prototype.backToDeck(card){
-	deck.add(card);
+	this.deck.add(card);
 
 }
 
