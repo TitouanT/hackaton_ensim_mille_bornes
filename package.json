@@ -1,0 +1,8 @@
+{
+  "name": "milleborne",
+  "version": "0.0.1",
+  "description": "mille borne, a multiplayer game",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
