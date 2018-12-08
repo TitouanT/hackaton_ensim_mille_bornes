@@ -1,6 +1,7 @@
 
 
-function Player (hand){
+function Player (hand, deck){
+	this.deck = deck;
 	 this.hand = hand;
 	 this.malus = [];
 	 this.botte = [];
@@ -9,10 +10,13 @@ function Player (hand){
 
 
 Player.prototype.play(indice, target){
-	if(target == undefined){
-		target = this;
+
+	if(target == this.deck){
+			this.backToDeck(this.hand[indice]);
 	}
-	return this.hand[indice].apply(this);
+
+}
+	return this.hand[indice].apply(this, target);
 
 
 
@@ -68,7 +72,7 @@ Player.prototype.addBonus(bonus){
 }
 
 Player.prototype.backToDeck(card){
-
+	deck.add(card);
 
 }
 
