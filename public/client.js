@@ -11,9 +11,9 @@ function main() {
 		return false;
 	});
 
-	socket.on('chat message', function(msg){
-		$('#messages').append($('<li>').text(msg));
-		console.log("received: ", msg);
+	socket.on('newPlayer', function(player){
+		$('#players').append($('<li>').text(player.pseudo));
+		console.log("received: ", player);
 	});
 }
 
