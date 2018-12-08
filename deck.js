@@ -2,32 +2,32 @@ const template = [
 	{
 		type: "Attaques",
 		cards: [
-			{qtt: 3, name: "Accident de la route ", nemesis: ["Repartion", "As du volant"] },
-			{ qtt:3, name: "Panne d essence", nemesis: ["Essence", "Camion-citene"]},
-			{ qtt:3, name: "Crevaison", nemesis:["Roue de secours", "Increvable"]},
-			{ qtt:3, name: "Limitation de vitsse", nemesis: ["Fin de limitationde vitesse", "Prioritaire"]},
-			{ qtt:3, name: "Feu rouge", nemesis: ["Feu vert"]},
+			{qtt: 3, name: "Accident de la route ", value: 1},
+			{ qtt:3, name: "Panne d essence", value: 2},
+			{ qtt:3, name: "Crevaison", value:3},
+			{ qtt:3, name: "Limitation de vitsse", value: 4},
+			{ qtt:3, name: "Feu rouge", value: 5},
 		]
 		},
 
 		{
 			type: "Defense",
 			cards: [
-				{qtt: 6, name: "Reparation"},
-				{ qtt:6, name: "Essence"},
-				{ qtt:6, name: "Roue de secours"},
-				{ qtt:6, name: "Fin delimitation de vitesse"},
-				{ qtt:14, name: "Feu vert"},
+				{qtt: 6, name: "Reparation", value:1},
+				{ qtt:6, name: "Essence", value: 2},
+				{ qtt:6, name: "Roue de secours", value:3},
+				{ qtt:6, name: "Fin delimitation de vitesse", vlue: 4},
+				{ qtt:14, name: "Feu vert", value :5},
 			]
 			},
 
 			{
 				type: "Bottes",
 				cards: [
-					{qtt: 1, name: "As du volant"},
-					{ qtt:1, name: "Camion-citerne"},
-					{ qtt:1, name: "Increvable"},
-					{ qtt:1, name: "Prioritaire"},
+					{qtt: 1, name: "As du volant", value : 1},
+					{ qtt:1, name: "Camion-citerne", value: 2},
+					{ qtt:1, name: "Increvable", value : 3},
+					{ qtt:1, name: "Prioritaire", value : 4},
 				]
 
 				},
@@ -35,11 +35,11 @@ const template = [
 				{
 					type: "Distance",
 					cards: [
-						{qtt: 10, name: "Escargot"},
-						{ qtt:10, name: "Canard"},
-						{ qtt:10, name: "Papillon"},
-						{ qtt:12, name: "Lièvre"},
-						{ qtt:4, name: "Hirondelle"},
+						{qtt: 10, value: 1},
+						{ qtt:10, value: 2},
+						{ qtt:10, value : 3},
+						{ qtt:12, value : 4},
+						{ qtt:4, value : 5},
 					]
 
 
