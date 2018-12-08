@@ -9,20 +9,19 @@ function Player (hand, deck){
 }
 
 
-Player.prototype.play(indice, target){
+Player.prototype.play = function(indice, target){
 
 	if(target == this.deck){
 			this.backToDeck(this.hand[indice]);
 	}
 
-}
 	return this.hand[indice].apply(this, target);
 
 
 
 }
 
-Player.prototype.protectedAgainst(attack){
+Player.prototype.protectedAgainst = function(attack){
 
 	for(botte of this.botte){
 		if (botte.value == attack.value){
@@ -33,7 +32,7 @@ Player.prototype.protectedAgainst(attack){
 }
 
 
-Player.prototype.removeFromHand(card){
+Player.prototype.removeFromHand = function(card){
 
 	let index = this.hand.indexOf(card);
 	if(index == -1){
@@ -44,14 +43,14 @@ Player.prototype.removeFromHand(card){
 	return true;
 	}
 
-Player.prototype.addMalus(malus){
+Player.prototype.addMalus = function(malus){
 
 	this.malus.push(malus);
 
 
 }
 
-Player.prototype.tryProtecWith(defense){
+Player.prototype.tryProtecWith = function(defense){
 
 	for(let i = 0; i< this.malus.length; i++){
 		let attack = this.malus[i];
@@ -66,12 +65,12 @@ Player.prototype.tryProtecWith(defense){
 	return false;
 }
 
-Player.prototype.addBonus(bonus){
+Player.prototype.addBonus = function(bonus){
 
 	this.bonus.push(bonus);
 }
 
-Player.prototype.backToDeck(card){
+Player.prototype.backToDeck = function(card){
 	this.deck.add(card);
 
 }
