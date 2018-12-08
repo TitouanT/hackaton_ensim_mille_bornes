@@ -8,8 +8,9 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
-http.listen(3000, function(){
-	console.log('mille bornes : listening on port 3000');
+const port = 8080;
+http.listen(port, "0.0.0.0", function(){
+	console.log('mille bornes : listening on port ', port);
 });
 
 io.on('connection', function(socket){
