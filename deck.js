@@ -48,25 +48,33 @@ const template = [
 
 		]
 
-function shuffleArray(array){
-	for (var i= array.length - 1; i > 0; i--){
-		let j = Math.floor(Math.random()* (i+1));
-		let temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
-}
 
-function deck() {
-	cards = [];
-for (ens of template) {
-	let type = ens.type;
-	for (groupe of ens.cards) {
-		for (i = 0; i < grocups.qtt; i++) {
-			cards.push(new Card(type, groupe.nam))
+function Deck() {
+	this.cards = [];
+	for (ens of template) {
+		let type = ens.type;
+		for (groupe of ens.cards) {
+			for (let i = 0; i < grocups.qtt; i++) {
+				cards.push(new Card(type, groupe.nam))
+			}
 		}
 	}
-}
-		return shuffleArray(cards);
+	this.shuffle = function () {
+		for (let i= this.cards.length - 1; i > 0; i--){
+			let j = Math.floor(Math.random()* (i+1));
+			let temp = this.cards[i];
+			this.cards[i] = this.cards[j];
+			this.cards[j] = temp;
+		}
+	};
+
+	this.add = function(card) {
+		this.cards.unshift(card);
+	};
+	this.take = function() {
+		return this.cards.pop();
+	}
+	this.shuffle();
+
 
 }
